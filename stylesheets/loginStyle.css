@@ -9,7 +9,7 @@ body {
     font-family: "OCR A Extended";
 }
 
-/* Text Align */
+/* -------Text------- */
 .text-c {
     text-align: center;
 }
@@ -23,7 +23,6 @@ body {
     text-align: justify;
 }
 
-/* Text Color */
 .text-whitesmoke {
     color: whitesmoke
 }
@@ -31,13 +30,11 @@ body {
     color: rgba(255, 0, 0, 0.60)
 }
 
-/* Lines */
-
 .line-b {
     border-bottom: 1px solid #FFEB3B !important;
 }
 
-/* Buttons */
+/* -------Buttons------- */
 .button {
     border-radius: 3px;
 }
@@ -62,7 +59,7 @@ body {
     width: 100% !important;
 }
 
-/* Margins g(global) - l(left) - r(right) - t(top) - b(bottom) */
+/* -------Margins g(global) - l(left) - r(right) - t(top) - b(bottom)------- */
 
 .margin-g {
     margin: 15px;
@@ -129,7 +126,7 @@ body {
     margin-bottom: 30px;
 }
 
-/* Bootstrap Form Control Extension */
+/* -------Bootstrap Form Control Extension------- */
 
 .form-control,
 .border-line {
@@ -155,7 +152,7 @@ body {
 }
 .form-control::-webkit-input-placeholder { color: #BDBDBD; }
 
-/* Container */
+/* -------Container------- */
 
 .container-content {
     background-color: #3a3a3aa2;
@@ -167,7 +164,7 @@ body {
     border-width: 1px 0;
 }
 
-/* Backgrounds */
+/* -------Backgrounds------- */
 
 .main-bg {
 
@@ -175,7 +172,7 @@ body {
     background: linear-gradient( #6a6a6a, #232323);
 }
 
-/* Login & Register Pages*/
+/* -------Login Page-------*/
 
 .login-container {
     max-width: 400px;

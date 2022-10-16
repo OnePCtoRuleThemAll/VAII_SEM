@@ -1,2 +1,9 @@
+.textWithPic {
+    text-align: justify;
+    font-family: "OCR A Extended";
+    color: #e6e6e6;
+}
 
-
+html,body {
+    background: linear-gradient(to bottom,#6a6a6a,#232323);
+}
