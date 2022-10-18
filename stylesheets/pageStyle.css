@@ -1,9 +1,84 @@
+html {
+    height: 100%;
+}
+body {
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: "Comic Sans MS";
+}
+
 .textWithPic {
     text-align: justify;
-    font-family: "OCR A Extended";
+    font-family: "Comic Sans MS";
     color: #e6e6e6;
 }
 
-html,body {
-    background: linear-gradient(to bottom,#6a6a6a,#232323);
+.main-bg {
+    background: #2c2c2c;
+}
+
+table {
+    background: linear-gradient(#f1cb26, #e6e6e6);
+    border: solid;
+
+}
+
+body {
+    font-family: "Comic Sans MS";
+    height: 100% !important;
+    background-color: #F8F9FB !important;
+}
+
+.card{
+    background-color: #F8F9FB !important;
+}
+
+p{
+    font-size: calc(12px + (14 - 12) * ((100vw - 360px) / (1600 - 360))) !important;
+    display: flex;
+}
+
+h3{
+    font-size: calc(24px + (30 - 24) * ((100vw - 360px) / (1600 - 360))) !important;
+}
+
+.social{
+    font-size: 21px !important;
+}
+
+
+.color-text{
+    color:#757575 !important;
+}
+
+button:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    outline-width: 0
+}
+
+footer{
+    color:#caced1 !important;
+}
+
+li{
+    margin-top: 20px ;
+    margin-bottom: 20px ;
+}
+
+.Careers{
+    cursor: pointer;
+    color: #1E88E5;
+}
+
+.row-1{
+    background-color:#1E242A !important;
+}
+
+.row-2{
+
+    background-color: #28323C !important;
 }
