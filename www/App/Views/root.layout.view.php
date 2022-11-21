@@ -14,41 +14,82 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
             integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
             crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="public/css/styl.css">
-    <script src="public/js/script.js"></script>
+    <link href="/www/public/css/pageStyle.css" rel="stylesheet">
+    <link href="/www/public/css/navBar.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/www/public/js/script.js"></script>
 </head>
-<body>
-<nav class="navbar navbar-expand-sm bg-light">
+<body class="main-bg">
+<nav class="navbar navbar-dark navbar-expand-lg bg-dark textInNav">
     <div class="container-fluid">
-        <a class="navbar-brand" href="?c=home">
-            <img src="public/images/vaiicko_logo.png" title="<?= \App\Config\Configuration::APP_NAME ?>"
-                 title="<?= \App\Config\Configuration::APP_NAME ?>">
-        </a>
-        <ul class="navbar-nav me-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="?c=home&a=contact">Kontakt</a>
-            </li>
-        </ul>
-        <?php if ($auth->isLogged()) { ?>
-            <span class="navbar-text">Prihlásený používateľ: <b><?= $auth->getLoggedUserName() ?></b></span>
-            <ul class="navbar-nav ms-auto">
+        <a class="navbar-brand" href="#"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link" href="?c=auth&a=logout">Odhlásenie</a>
+                    <a class="nav-link" aria-current="page" href="?c=home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Task</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Dealer</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Statistics
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Actual season</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Historical evidence</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Records</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About game</a>
                 </li>
             </ul>
-        <?php } else { ?>
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="<?= \App\Config\Configuration::LOGIN_URL ?>">Prihlásenie</a>
-                </li>
-            </ul>
-        <?php } ?>
+        </div>
     </div>
 </nav>
 <div class="container-fluid mt-3">
     <div class="web-content">
         <?= $contentHTML ?>
     </div>
+</div>
+
+<div class="footer-dark">
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-md-3 item">
+                    <h3>[placeholder]</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">[placeholder]</a></li>
+                        <li><a href="#">[placeholder]</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-6 col-md-3 item">
+                    <h3>[placeholder]</h3>
+                    <ul>
+                        <li><a href="?c=statistics">Actual season</a></li>
+                        <li><a href="#">[placeholder]</a></li>
+                        <li><a href="#">[placeholder]</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 item text">
+                    <h3>[placeholder]</h3>
+                    <p>Praesent sed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac sem lacus. Ut vehicula rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo.</p>
+                </div>
+            </div>
+            <p class="copyright">OnePCtoRuleThemAll © 2022</p>
+        </div>
+    </footer>
 </div>
 </body>
 </html>
