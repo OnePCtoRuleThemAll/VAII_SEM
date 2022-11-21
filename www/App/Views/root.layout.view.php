@@ -14,10 +14,10 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
             integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
             crossorigin="anonymous"></script>
-    <link href="/www/public/css/pageStyle.css" rel="stylesheet">
-    <link href="/www/public/css/navBar.css" rel="stylesheet">
+    <link href="public/css/pageStyle.css" rel="stylesheet">
+    <link href="public/css/navBar.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="/www/public/js/script.js"></script>
+    <script src="public/js/script.js"></script>
 </head>
 <body class="main-bg">
 <nav class="navbar navbar-dark navbar-expand-lg bg-dark textInNav">

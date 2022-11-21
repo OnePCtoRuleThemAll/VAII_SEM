@@ -55,10 +55,26 @@ class StatisticsController extends AControllerBase
     {
         $id = $this->request()->getValue("id");
         $statistics = Actual::getOne($id);
-        if ($statistics == null) {
-            return $this->redirect("?c=statistics");
+        if ($statistics != null) {
+            return $this->html($statistics,'edit');
 
         }
         return $this->redirect("?c=statistics");
+    }
+
+    public function saveEdited(): Response
+    {
+        $id = $this->request()->getValue("id");
+        $data = $this->request()->getPost();
+        $statistics = Actual::getOne($id);
+        if (isset($data["name"])) {
+            $statistics->setName($data["name"]);
+            $statistics->setSurename($data["surename"]);
+            $statistics->setNote($data["note"]);
+            $statistics->setPoints($data["points"]);
+            $statistics->save();
+            return $this->redirect("?c=statistics");
+        }
+        return $this->html($statistics, 'edit');
     }
 }

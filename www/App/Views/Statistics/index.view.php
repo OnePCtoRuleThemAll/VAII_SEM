@@ -15,9 +15,10 @@
             </tr>
             </thead>
             <tbody class="table-group-divider">
+            <?php $i = 1?>
             <?php foreach ($data as $row) {?>
             <tr class="table-active">
-                <th><?=$row->getId()?></th>
+                <th><?=$i?></th>
                 <td><?=$row->getName()?></td>
                 <td><?=$row->getSurename()?></td>
                 <td><?=$row->getPoints()?></td>
@@ -25,9 +26,10 @@
                 <td>
                     <a href="?c=statistics&a=delete&id=<?=$row->getId()?>" class="btn btn-danger">Delete</a>
                     <a href="?c=statistics&a=edit&id=<?=$row->getId()?>" class="btn btn-primary">Edit</a>
+                    <a href="?c=statistics&a=add" class="btn btn-secondary">Add</a>
                 </td>
             </tr>
-            <?php } ?>
+            <?php $i++; } ?>
             </tbody>
         </table>
     </div>
