@@ -42,7 +42,7 @@
                         Statistics
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Actual season</a></li>
+                        <li><a class="dropdown-item" href="?c=statistics">Actual season</a></li>
                         <li><hr class="dropdown-divider"></li>
                         <li><a class="dropdown-item" href="#">Historical evidence</a></li>
                         <li><hr class="dropdown-divider"></li>
@@ -69,7 +69,7 @@
                 <div class="col-sm-6 col-md-3 item">
                     <h3>[placeholder]</h3>
                     <ul>
-                        <li><a href="#">Home</a></li>
+                        <li><a href="?c=home">Home</a></li>
                         <li><a href="#">[placeholder]</a></li>
                         <li><a href="#">[placeholder]</a></li>
                     </ul>

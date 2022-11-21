@@ -4,7 +4,7 @@ namespace App\Models;
 
 use App\Core\Model;
 
-class Statistics extends Model
+class Actual extends Model
 {
     protected int $id;
     protected string $name;

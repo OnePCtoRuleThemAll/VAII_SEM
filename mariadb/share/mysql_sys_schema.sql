@@ -4297,7 +4297,7 @@ SELECT SUM(CURRENT_NUMBER_OF_BYTES_USED) total_allocated
 --
 -- View: schema_index_statistics
 --
--- Statistics around indexes.
+-- Actual around indexes.
 --
 -- Ordered by the total wait time descending - top indexes are most contended.
 --
@@ -4363,7 +4363,7 @@ SELECT OBJECT_SCHEMA AS table_schema,
 --
 -- View: x$schema_index_statistics
 --
--- Statistics around indexes.
+-- Actual around indexes.
 --
 -- Ordered by the total wait time descending - top indexes are most contended.
 --
@@ -4494,7 +4494,7 @@ SELECT extract_schema_from_file_name(file_name) AS table_schema,
 --
 -- View: schema_table_statistics
 --
--- Statistics around tables.
+-- Actual around tables.
 --
 -- Ordered by the total wait time descending - top tables are most contended.
 -- 
@@ -4589,7 +4589,7 @@ SELECT pst.object_schema AS table_schema,
 --
 -- View: x$schema_table_statistics
 --
--- Statistics around tables.
+-- Actual around tables.
 --
 -- Ordered by the total wait time descending - top tables are most contended.
 -- 
@@ -4684,7 +4684,7 @@ SELECT pst.object_schema AS table_schema,
 --
 -- View: schema_table_statistics_with_buffer
 --
--- Statistics around tables.
+-- Actual around tables.
 --
 -- Ordered by the total wait time descending - top tables are most contended.
 --
@@ -4807,7 +4807,7 @@ DELIMITER ;
 --
 -- View: x$schema_table_statistics_with_buffer
 --
--- Statistics around tables.
+-- Actual around tables.
 --
 -- Ordered by the total wait time descending - top tables are most contended.
 --

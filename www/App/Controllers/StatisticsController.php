@@ -4,7 +4,7 @@ namespace App\Controllers;
 
 use App\Core\AControllerBase;
 use App\Core\Responses\Response;
-use App\Models\Statistics;
+use App\Models\Actual;
 
 /**
  * Class StatisticsController
@@ -21,7 +21,7 @@ class StatisticsController extends AControllerBase
 
     public function index(): Response
     {
-        $statistics = Statistics::getAll();
+        $statistics = Actual::getAll();
         return $this->html($statistics);
     }
 
@@ -29,7 +29,7 @@ class StatisticsController extends AControllerBase
     {
         $data = $this->request()->getPost();
         if (isset($data["name"])) {
-            $statistics = new Statistics();
+            $statistics = new Actual();
             $statistics->setName($data["name"]);
             $statistics->setSurename($data["surename"]);
             $statistics->setNote($data["note"]);
@@ -43,7 +43,7 @@ class StatisticsController extends AControllerBase
     public function delete(): Response
     {
         $id = $this->request()->getValue("id");
-        $statistics = Statistics::getOne($id);
+        $statistics = Actual::getOne($id);
         if ($statistics != null) {
             $statistics->delete();
 
@@ -54,7 +54,7 @@ class StatisticsController extends AControllerBase
     public function edit(): Response
     {
         $id = $this->request()->getValue("id");
-        $statistics = Statistics::getOne($id);
+        $statistics = Actual::getOne($id);
         if ($statistics == null) {
             return $this->redirect("?c=statistics");
 
