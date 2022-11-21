@@ -26,7 +26,7 @@
                 <td>
                     <a href="?c=statistics&a=delete&id=<?=$row->getId()?>" class="btn btn-danger">Delete</a>
                     <a href="?c=statistics&a=edit&id=<?=$row->getId()?>" class="btn btn-primary">Edit</a>
-                    <a href="?c=statistics&a=add" class="btn btn-secondary">Add</a>
+                    <a href="?c=statistics&a=add" class="btn btn-success">Add</a>
                 </td>
             </tr>
             <?php $i++; } ?>

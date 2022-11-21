@@ -29,14 +29,15 @@ class StatisticsController extends AControllerBase
     {
         $data = $this->request()->getPost();
         if (isset($data["name"])) {
-            $statistics = new Actual();
-            $statistics->setName($data["name"]);
-            $statistics->setSurename($data["surename"]);
-            $statistics->setNote($data["note"]);
-            $statistics->setPoints($data["points"]);
-            $statistics->save();
-            return $this->redirect("?c=statistics");
-        }
+            if ($this->validate($data)) {
+                $statistics = new Actual();
+                $statistics->setName($data["name"]);
+                $statistics->setSurename($data["surename"]);
+                $statistics->setNote($data["note"]);
+                $statistics->setPoints($data["points"]);
+                $statistics->save();
+                return $this->redirect("?c=statistics");
+            }        }
         return $this->html();
     }
 
@@ -67,7 +68,7 @@ class StatisticsController extends AControllerBase
         $id = $this->request()->getValue("id");
         $data = $this->request()->getPost();
         $statistics = Actual::getOne($id);
-        if (isset($data["name"])) {
+        if ($this->validate($data)) {
             $statistics->setName($data["name"]);
             $statistics->setSurename($data["surename"]);
             $statistics->setNote($data["note"]);
@@ -76,5 +77,22 @@ class StatisticsController extends AControllerBase
             return $this->redirect("?c=statistics");
         }
         return $this->html($statistics, 'edit');
+    }
+
+    private function validate($data): bool
+    {
+        if(!ctype_alpha($data["name"])) {
+            return false;
+        }
+        if(!ctype_alpha($data["surename"])) {
+            return false;
+        }
+        if(!is_numeric($data["points"])) {
+            return false;
+        }
+        if(!ctype_alpha($data["note"])) {
+            return false;
+        }
+        return true;
     }
 }
