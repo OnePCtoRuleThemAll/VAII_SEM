@@ -16,7 +16,7 @@ body {
 }
 
 .main-bg {
-    background: #2c2c2c;
+    background: #2c2c2c !important;
 }
 
 table {

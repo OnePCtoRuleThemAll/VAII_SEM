@@ -3,7 +3,7 @@
 /** @var \App\Core\IAuthenticator $auth */
 ?>
 <!DOCTYPE html>
-<html lang="sk">
+<html lang="en">
 <head>
     <title><?= \App\Config\Configuration::APP_NAME ?></title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -18,9 +18,11 @@
             integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
             crossorigin="anonymous"></script>
     <link rel="stylesheet" href="public/css/styl.css">
+    <link href="public/css/loginStyle.css" rel="stylesheet">
+    <link href="public/css/pageStyle.css" rel="stylesheet">
     <script src="public/js/script.js"></script>
 </head>
-<body>
+<body class="main-bg">
 <div class="container-fluid mt-3">
     <div class="web-content">
         <?= $contentHTML ?>

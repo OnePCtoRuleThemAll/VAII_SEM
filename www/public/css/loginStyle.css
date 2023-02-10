@@ -26,7 +26,7 @@ body {
 .text-whitesmoke {
     color: whitesmoke
 }
-.text-darkyellow {
+.text-redish {
     color: rgba(255, 0, 0, 0.60)
 }
 
@@ -75,7 +75,7 @@ body {
 }
 .form-control:focus,
 .border-line:focus {
-    border-color: #FFEB3B;
+    border-color: #ff4e4e;
     background-color: #616161;
     color: #e6e6e6;
 }
