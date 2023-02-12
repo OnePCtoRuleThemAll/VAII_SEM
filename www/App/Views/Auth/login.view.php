@@ -5,11 +5,13 @@ $layout = 'auth';
 
 <div class="login-container text-c animated flipInX">
     <h3 class="text-whitesmoke">Log In</h3>
-    <div class="text-center text-danger mb-3">
-        <?= @$data['message'] ?>
-    </div>
+
     <div class="container-content">
-        <br class="margin-t" method="post" action="<?= \App\Config\Configuration::LOGIN_URL ?>">
+        <form class="form-signin" method="post" action="<?= \App\Config\Configuration::LOGIN_URL ?>">
+            <br class="margin-t">
+            <div class="text-center text-danger mb-3">
+                <?= @$data['message'] ?>
+            </div>
             <div class="form-group">
                 <input name="login" type="text" id="login" class="form-control" placeholder="Login"
                        required autofocus>
@@ -18,7 +20,7 @@ $layout = 'auth';
                 <input name="password" type="password" id="password" class="form-control"
                        placeholder="Password" required>
             </div>
-            <button type="submit" class="form-button button-l margin-b">Sign In</button>
+            <button type="submit" name="submit" class="form-button button-l margin-b">Sign In</button>
 
             <a class="text-redish" href="#"><small>Forgot your password?</small></a>
             <p class="text-whitesmoke text-center"><small>Do not have an account?</small></p>
@@ -26,3 +28,4 @@ $layout = 'auth';
         </form>
     </div>
 </div>
+

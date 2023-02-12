@@ -29,7 +29,7 @@ class DummyAuthenticator implements IAuthenticator
      */
     function login($login, $password): bool
     {
-        $loggedUser = Users::getAll("login = ?", [$login]);
+        $loggedUser = Users::getAll("username = ?", [$login]);
 
         if(count($loggedUser) == 1) {
             $loggedUser = $loggedUser[0];
@@ -59,7 +59,7 @@ class DummyAuthenticator implements IAuthenticator
     function getLoggedUserName(): string
     {
 
-        return isset($_SESSION['user']) ? $_SESSION['user'] : throw new \Exception("User not logged in");
+        return $_SESSION['user']->getLogin() ?? throw new \Exception("User not logged in");
     }
 
     /**
@@ -86,6 +86,6 @@ class DummyAuthenticator implements IAuthenticator
      */
     function getLoggedUserId(): mixed
     {
-        return $_SESSION['user'];
+        return $_SESSION['user']->getId() ?? throw new \Exception("User not logged in");
     }
 }

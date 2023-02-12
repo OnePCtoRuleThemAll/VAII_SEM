@@ -10,6 +10,7 @@ class Users extends Model
     protected string $username;
     protected string $password;
     protected string $email;
+    protected string $role;
 
     /**
      * @return int
@@ -65,6 +66,22 @@ class Users extends Model
     public function setEmail(string $email): void
     {
         $this->email = $email;
+    }
+
+    /**
+     * @return string
+     */
+    public function getRole(): string
+    {
+        return $this->role;
+    }
+
+    /**
+     * @param string $role
+     */
+    public function setRole(string $role): void
+    {
+        $this->role = $role;
     }
 
 

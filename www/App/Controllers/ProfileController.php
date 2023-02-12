@@ -22,7 +22,7 @@ class ProfileController extends AControllerBase
 
     public function index(): Response
     {
-        $profile = [Profile::getAll(), Users::getAll()];
+        $profile = [Profile::getOne($_SESSION['user']->getId()), Users::getOne($_SESSION['user']->getId())];
         return $this->html($profile);
     }
 

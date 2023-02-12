@@ -61,11 +61,11 @@
             <ul class="nav navbar-nav flex-row justify-content-between ml-auto">
                 <?php if ($auth->isLogged()) { ?>
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="?c=auth&a=login">Log in</a>
+                        <a class="nav-link" aria-current="page" href="?c=auth&a=logout">Logout</a>
                     </li>
                 <?php } else { ?>
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="?c=auth&a=logout">Logout</a>
+                        <a class="nav-link" aria-current="page" href="?c=auth&a=login">Log in</a>
                     </li>
                 <?php } ?>
             </ul>
