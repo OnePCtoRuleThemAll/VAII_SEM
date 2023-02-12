@@ -8,7 +8,7 @@ use App\Models\Profile;
 use App\Models\Users;
 
 /**
- * Class StatisticsController
+ * Class ProfileController
  * Example class of a controller
  * @package App\Controllers
  */

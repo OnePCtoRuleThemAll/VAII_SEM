@@ -24,7 +24,7 @@ $layout = 'auth';
 
             <a class="text-redish" href="#"><small>Forgot your password?</small></a>
             <p class="text-whitesmoke text-center"><small>Do not have an account?</small></p>
-            <a class="text-redish" href="#"><small>Sign Up</small></a>
+            <a class="text-redish" href="?c=registration"><small>Sign Up</small></a>
         </form>
     </div>
 </div>
