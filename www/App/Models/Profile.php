@@ -75,7 +75,7 @@ class Profile extends Model
      */
     public function getPhoto(): string
     {
-        return $this->imageUrl;
+        return $this->photo;
     }
 
     /**
@@ -83,7 +83,7 @@ class Profile extends Model
      */
     public function setPhoto(string $photo): void
     {
-        $this->imageUrl = $photo;
+        $this->photo = $photo;
     }
 
     /**

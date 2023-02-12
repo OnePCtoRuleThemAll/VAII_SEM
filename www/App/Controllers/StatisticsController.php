@@ -5,6 +5,7 @@ namespace App\Controllers;
 use App\Core\AControllerBase;
 use App\Core\Responses\Response;
 use App\Models\Actual;
+use App\Models\Teams;
 
 /**
  * Class StatisticsController
@@ -21,7 +22,7 @@ class StatisticsController extends AControllerBase
 
     public function index(): Response
     {
-        $statistics = Actual::getAll();
+        $statistics = [Actual::getAll(), Teams::getAll()];
         return $this->html($statistics);
     }
 
