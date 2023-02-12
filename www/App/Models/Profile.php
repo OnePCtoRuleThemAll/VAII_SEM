@@ -9,11 +9,26 @@ class Profile extends Model
     protected int $id;
     protected string $name;
     protected string $surename;
-    protected int $points;
-    protected string $imageUrl;
-    protected string $email;
+    protected string $photo;
     protected int $age;
     protected string $faculty;
+    protected int $login_id;
+
+    /**
+     * @return int
+     */
+    public function getLoginId(): int
+    {
+        return $this->login_id;
+    }
+
+    /**
+     * @param int $login_id
+     */
+    public function setLoginId(int $login_id): void
+    {
+        $this->login_id = $login_id;
+    }
 
     /**
      * @return int
@@ -56,51 +71,19 @@ class Profile extends Model
     }
 
     /**
-     * @return int
-     */
-    public function getPoints(): int
-    {
-        return $this->points;
-    }
-
-    /**
-     * @param int $points
-     */
-    public function setPoints(int $points): void
-    {
-        $this->points = $points;
-    }
-
-    /**
      * @return string
      */
-    public function getImageUrl(): string
+    public function getPhoto(): string
     {
         return $this->imageUrl;
     }
 
     /**
-     * @param string $imageUrl
+     * @param string $photo
      */
-    public function setImageUrl(string $imageUrl): void
+    public function setPhoto(string $photo): void
     {
-        $this->imageUrl = $imageUrl;
-    }
-
-    /**
-     * @return string
-     */
-    public function getEmail(): string
-    {
-        return $this->email;
-    }
-
-    /**
-     * @param string $email
-     */
-    public function setEmail(string $email): void
-    {
-        $this->email = $email;
+        $this->imageUrl = $photo;
     }
 
     /**

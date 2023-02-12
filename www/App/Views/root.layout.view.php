@@ -52,6 +52,22 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#">About game</a>
                 </li>
+                <?php if ($auth->isLogged()) { ?>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="?c=profile">Profile</a>
+                    </li>
+                <?php } ?>
+            </ul>
+            <ul class="nav navbar-nav flex-row justify-content-between ml-auto">
+                <?php if ($auth->isLogged()) { ?>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="?c=auth&a=login">Log in</a>
+                    </li>
+                <?php } else { ?>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="?c=auth&a=logout">Logout</a>
+                    </li>
+                <?php } ?>
             </ul>
         </div>
     </div>
