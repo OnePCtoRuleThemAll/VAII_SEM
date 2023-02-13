@@ -1,5 +1,8 @@
 <?php /**@var \App\Models\Profile $data */ ?>
 
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="public/js/code.js"></script>
+
 <div class="container">
     <div class="container rounded bg-white mt-5 mb-5">
         <div class="row">
@@ -20,7 +23,7 @@
             </div>
             <div class="col-md-5 border-right">
                 <div class="p-1 py-5">
-                    <form>
+                    <form id="taskCodeForm">
                         <div class="form-row ">
                             <div class="col-5">
                                 <label for="taskCode">Task code</label>
@@ -28,12 +31,10 @@
                                 <small id="taskHelp" class="form-text text-muted">Yor target will give you code</small>
                             </div>
                         </div>
-                        <button type="submit" class="btn btn-danger">Submit</button>
+                        <button class="btn btn-danger" onclick="getCode()">Submit</button>
                     </form>
                 </div>
             </div>
         </div>
     </div>
-</div>
-</div>
 </div>

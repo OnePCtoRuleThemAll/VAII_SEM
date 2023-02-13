@@ -1,3 +1,5 @@
+<?php /**@var \App\Models\Image[] $data */ ?>
+
 <div class="container">
     <div id="carouselInterval" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">

@@ -36,7 +36,6 @@ class ProfileController extends AControllerBase
             $profile->setSurename($data["surename"]);
             $profile->setAge($data["age"]);
             $profile->setFaculty($data["faculty"]);
-            $profile->setEmail($data["email"]);
             $profile->save();
         }
         return $this->redirect("?c=profile");

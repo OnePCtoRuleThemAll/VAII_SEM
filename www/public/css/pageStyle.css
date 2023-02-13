@@ -20,7 +20,7 @@ body {
 }
 
 table {
-    background: linear-gradient(#f1cb26, #e6e6e6);
+    background: linear-gradient(#ffffff, #e6e6e6);
     border: solid;
 
 }
@@ -87,3 +87,17 @@ h2 {
     color: #e6e6e6;
     margin-top: 10px;
 }
+
+nameError {
+    display: none;
+    font-size: 0.8em;
+}
+
+nameError.visible {
+    display: block;
+}
+
+input.invalid {
+    border-color: red;
+}
+

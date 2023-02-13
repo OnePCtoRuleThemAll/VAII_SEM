@@ -10,6 +10,7 @@ class Task extends Model
     protected int $target;
     protected int $taskmaster;
     protected string $code;
+    protected string $state;
 
     /**
      * @return int
@@ -49,6 +50,22 @@ class Task extends Model
     public function setTaskCode(string $code): void
     {
         $this->code = $code;
+    }
+
+    /**
+     * @return string
+     */
+    public function getState(): string
+    {
+        return $this->state;
+    }
+
+    /**
+     * @param string $state
+     */
+    public function setState(string $state): void
+    {
+        $this->state = $state;
     }
 
 
