@@ -3,7 +3,10 @@
 namespace App\Controllers;
 
 use App\Core\AControllerBase;
+use App\Core\Responses\JsonResponse;
 use App\Core\Responses\Response;
+use App\Models\Profile;
+use App\Models\Users;
 
 /**
  * Class HomeController
@@ -28,6 +31,20 @@ class AdminController extends AControllerBase
      */
     public function index(): Response
     {
-        return $this->html();
+        $profiles = Profile::getAll();
+        return $this->html($profiles);
+    }
+
+    public function filter(): JsonResponse
+    {
+        $substring = $this->request()->getValue("substring");
+        $profiles = Profile::getAll();
+        $data = array();
+        foreach ($profiles as $profile) {
+            if (str_contains(strtolower($profile->getName()), strtolower($substring)) ){
+                array_push($data, $profile);
+            }
+        }
+        return $this->json($data);
     }
 }

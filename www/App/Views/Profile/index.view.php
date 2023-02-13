@@ -21,9 +21,11 @@
                         <div class="col-md-12"><label class="labels">Email</label><input type="email" class="form-control" placeholder="enter email address" value="<?=$data[1]->getEmail()?>"></div>
                     </div>
 
+                    <?php if($data[1]->getRole() == "admin") { ?>
                     <div class="mt-5 text-center">
-                        <button class="btn btn-primary profile-button" type="button">Save Changes</button>
+                        <a href="?c=admin" class="btn btn-primary">Manage profiles</a>
                     </div>
+                    <?php } ?>
                 </div>
             </div>
         </div>
