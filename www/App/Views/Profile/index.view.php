@@ -21,7 +21,9 @@
                         <div class="col-md-12"><label class="labels">Email</label><input type="email" class="form-control" placeholder="enter email address" value="<?=$data[1]->getEmail()?>"></div>
                     </div>
 
-                    <div class="mt-5 text-center"><button class="btn btn-primary profile-button" type="button">Save Changes</button></div>
+                    <div class="mt-5 text-center">
+                        <button class="btn btn-primary profile-button" type="button">Save Changes</button>
+                    </div>
                 </div>
             </div>
         </div>

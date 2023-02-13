@@ -31,9 +31,11 @@
                 <li class="nav-item">
                     <a class="nav-link" aria-current="page" href="?c=home">Home</a>
                 </li>
+                <?php if ($auth->isLogged()) { ?>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Task</a>
+                    <a class="nav-link" href="?c=task">Task</a>
                 </li>
+                <?php } ?>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Dealer</a>
                 </li>
@@ -86,8 +88,10 @@
                     <h3>[placeholder]</h3>
                     <ul>
                         <li><a href="?c=home">Home</a></li>
-                        <li><a href="#">[placeholder]</a></li>
-                        <li><a href="#">[placeholder]</a></li>
+                        <?php if ($auth->isLogged()) { ?>
+                        <li><a href="?c=profile">Profile</a></li>
+                        <li><a href="?c=task">Task</a></li>
+                        <?php } ?>
                     </ul>
                 </div>
                 <div class="col-sm-6 col-md-3 item">
