@@ -7,7 +7,7 @@ async function getCode() {
             const state = await response.json();
 
             if(state.match("Completed")) {
-                alert("Task completed!");
+                document.getElementById('taskState').innerHTML = "Status: COMPLETED";
             }
         }
     }
