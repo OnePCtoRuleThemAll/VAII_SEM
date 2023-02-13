@@ -18,7 +18,7 @@
                                 <div class="row">
                                     <div class="mb-4 d-flex align-items-center">
                                         <div class="form-outline datepicker w-100">
-                                            <labelclass="form-label">Password</label>
+                                            <label class="form-label">Password</label>
                                             <input type="password" class="form-control form-control-lg" id="password" name="password" />
                                         </div>
                                     </div>
